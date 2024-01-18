@@ -35,7 +35,7 @@ class LoginForm(FlaskForm):
 
 
 class UpdateAccountForm(FlaskForm):
-    username = StringField('անվանում', validators=[DataRequired(), Length(min=2, max=20)])
+    username = StringField('Անվանում', validators=[DataRequired(), Length(min=2, max=20)])
     email = StringField('Էլ․հասցե', validators=[DataRequired(), Email()])
     picture = FileField('Թարմացնել էջի նկարը', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Թարմացնել')

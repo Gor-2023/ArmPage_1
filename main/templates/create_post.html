@@ -22,23 +22,6 @@
                 </div>
             {% endfor %}
 
-<!--            <div class="form-group">-->
-<!--                {{ form.image.label(class="form-control-label") }}-->
-<!--                {% if form.image.errors %}-->
-<!--                    {{ form.image(class="form-control form-control-lg is-invalid") }}-->
-<!--                    <div class="invalid-feedback">-->
-<!--                        {% for error in form.image.errors %}-->
-<!--                            <span>{{ error }}</span>-->
-<!--                        {% endfor %}-->
-<!--                    </div>-->
-<!--                {% else %}-->
-<!--                    {{ form.image(class="form-control form-control-lg") }}-->
-<!--                {% endif %}-->
-<!--            </div>-->
-
-<!--            {% if image_file %}-->
-<!--                <img src="{{ url_for('static', filename='post_images/' + image_file) }}" alt="Post Image" class="img-fluid">-->
-<!--            {% endif %}-->
 
         </fieldset>
         <div class="form-group">
@@ -48,19 +31,7 @@
 </div>
 
 
-<!--<div class="form-group">-->
-<!--    {{ form.image.label(class="form-control-label") }}-->
-<!--    {% if form.image.errors %}-->
-<!--        {{ form.image(class="form-control form-control-lg post-image is-invalid") }}-->
-<!--        <div class="invalid-feedback">-->
-<!--            {% for error in form.image.errors %}-->
-<!--                <span>{{ error }}</span>-->
-<!--            {% endfor %}-->
-<!--        </div>-->
-<!--    {% else %}-->
-<!--        {{ form.image(class="form-control form-control-lg post-image") }}-->
-<!--    {% endif %}-->
-<!--</div>-->
+
 
 
 {% endblock content %}
