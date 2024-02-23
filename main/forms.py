@@ -8,7 +8,7 @@ from main.models import User
 
 class RegistrationForm(FlaskForm):
     username = StringField('Անվանում', validators=[DataRequired(), Length(min=2, max=20)])
-    email = StringField('Էլ․հասցե', զvalidators=[DataRequired(), Email()])
+    email = StringField('Էլ․հասցե', validators=[DataRequired(), Email()])
     password = PasswordField('Գաղտնաբառ', validators=[DataRequired()])
     confirm_password = PasswordField('Հաստատել գաղտնաբառը', validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Գրանցում')

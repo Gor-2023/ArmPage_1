@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  flask_app:
+    build:
+      context: .
+      dockerfile: main/Dockerfile
+    container_name: container1
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres-db
+    environment:
+      - FLASK_APP=run.py
+    command: flask run --host=0.0.0.0
+#    ports:
+#       - "80:5000"
+#    environment:
+#      SQLALCHEMY_DATABASE_URI: 'postgresql://postgres:732079@postgres-db:5432/ArmPage'
+
+
+
+
+  postgres-db:
+    image: postgres:latest
+    container_name: pg-container1
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: '732079'
+      POSTGRES_DB: 'ArmPage'
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres_data:
